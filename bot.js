@@ -37,8 +37,9 @@ client.on('disconnect', function(erMsg, code) {
 client.on('reconnecting', () => console.log('I am reconnecting now!'));
 
 client.on('message', async msg => { // eslint-disable-line
-
-	
+	function getRandomInt(max) {
+		return Math.floor(Math.random() * Math.floor(max));
+	}
 	
 	if (msg.author.id !== '<@232926992444555264>' && msg.content.startsWith("heyo")) {
 		var x = getRandomInt(3);
