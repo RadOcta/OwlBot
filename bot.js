@@ -42,17 +42,9 @@ client.on('message', async msg => { // eslint-disable-line
 	}
 	
 	if (msg.author.id !== '<@232926992444555264>' && msg.content.startsWith("heyo")) {
-		var x = getRandomInt(3);
-		if (x = 0) {
-			msg.channel.sendMessage(msg.author.toString() + " Heyo my ass. Suck a penus!");
-			var x = getRandomInt(3);
-		} else if (x = 1) {
+			//msg.channel.sendMessage(msg.author.toString() + " Heyo my ass. Suck a penus!");
 			msg.channel.sendMessage(msg.author.toString() + " Shut the fuck up Steve I fucked your mom");
-			var x = getRandomInt(3);
-		} else if (x = 2) {
-			msg.channel.sendMessage(msg.author.toString() + " We all know you need money Karen but those lips aren't good enough");
-			var x = getRandomInt(3);
-		}
+			//msg.channel.sendMessage(msg.author.toString() + " We all know you need money Karen but those lips aren't good enough");
     	}
 	
 	//if (msg.author.id === '<@425333761660682241>') {
