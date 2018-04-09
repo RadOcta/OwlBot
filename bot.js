@@ -8,7 +8,7 @@ const GOOGLE_API_KEY = "AIzaSyBeacgPpA6JTR3OBpiD_IIDWC-184xFz04";
 //const music = require('discord.js-music');
 //const YoutubeDL = require('youtube-dl');
 const ytdl = require('ytdl-core');
-const TOKEN = "NDMwNjc5NzM1MTg2NzUxNDg4.DaTtUw.cQWijiFZtemSPqWWjfv-7VjE60Q";
+//const TOKEN = "NDMwNjc5NzM1MTg2NzUxNDg4.DaTtUw.cQWijiFZtemSPqWWjfv-7VjE60Q";
 const youtube = new YouTube(GOOGLE_API_KEY);
 //const music = require('discord.js-music-v11');
 
