@@ -41,8 +41,15 @@ client.on('message', async msg => { // eslint-disable-line
 	
 	
 	if (msg.author.id !== '<@232926992444555264>' && msg.content.startsWith("heyo")) {
-        msg.channel.sendMessage(msg.author.toString() + " Heyo my ass. Suck a penus!");
-    }
+		var x = getRandomInt(3);
+		if (x = 0) {
+			msg.channel.sendMessage(msg.author.toString() + " Heyo my ass. Suck a penus!");
+		} else if (x = 1) {
+			msg.channel.sendMessage(msg.author.toString() + " Shut the fuck up Steve I fucked your mom");
+		} else if (x = 2) {
+			msg.channel.sendMessage(msg.author.toString() + " We all know you need money Karen but those lips aren't good enough");
+		}
+    	}
 	
 	//if (msg.author.id === '<@425333761660682241>') {
 	//	msg.reply(msg.author.toString() + "https://cdn.discordapp.com/attachments/422076494664302607/431501422387920936/But-Thats-None-Of-My-Business.png")
