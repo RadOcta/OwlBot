@@ -60,17 +60,10 @@ client.on('message', async msg => { // eslint-disable-line
 	//if (!msg.content.startsWith(PREFIX)) return undefined;
 	
 	if(msg.author.bot) return;
-
-    if (msg.author.id !== '<@232926992444555264>' && msg.content.startsWith("<@194793217269432321>") || msg.content.startsWith("<@232926992444555264>") || msg.author.id !== '<@232926992444555264>' && msg.content.startsWith("<@430679735186751488>")) {
-		var i = 0;
-		msg.channel.sendMessage(msg.author.toString() + " Shut up gay fag.");
-		while (i < 500000) {
-			if (msg.author.id !== '<@425333761660682241>') {
-			msg.author.sendMessage(msg.author.toString() + " https://cdn.discordapp.com/attachments/422076494664302607/431501422387920936/But-Thats-None-Of-My-Business.png")
-			i++;
-			}
-		}
-    }
+	
+	if (msg.content.startsWith("<@232926992444555264>") || msg.content.startsWith("<@430679735186751488>")) {
+		msg.author.sendMessage(msg.author.toString() + " https://cdn.discordapp.com/attachments/422076494664302607/431501422387920936/But-Thats-None-Of-My-Business.png");
+	}
 
 	const args = msg.content.split(' ');
 	const searchString = args.slice(1).join(' ');
