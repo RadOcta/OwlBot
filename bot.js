@@ -62,11 +62,18 @@ client.on('message', async msg => { // eslint-disable-line
 	if(msg.author.bot) return;
 	
 	if (msg.content.startsWith("<@232926992444555264>") || msg.content.startsWith("<@430679735186751488>")) {
-		var i = 0;
-		while (i < 10) {
-			msg.author.sendMessage(msg.author.toString() + " https://cdn.discordapp.com/attachments/422076494664302607/431501422387920936/But-Thats-None-Of-My-Business.png");
-			++i;
-		}
+		msg.author.sendMessage(msg.author.toString() + " Yo mom a bitch.");
+		msg.author.sendMessage(msg.author.toString() + " https://cdn.discordapp.com/attachments/422076494664302607/431501422387920936/But-Thats-None-Of-My-Business.png");
+		msg.author.sendMessage(msg.author.toString() + " Yo mom a bitch.");
+		msg.author.sendMessage(msg.author.toString() + " https://cdn.discordapp.com/attachments/422076494664302607/431501422387920936/But-Thats-None-Of-My-Business.png");
+		msg.author.sendMessage(msg.author.toString() + " Yo mom a bitch.");
+		msg.author.sendMessage(msg.author.toString() + " https://cdn.discordapp.com/attachments/422076494664302607/431501422387920936/But-Thats-None-Of-My-Business.png");
+		msg.author.sendMessage(msg.author.toString() + " Yo mom a bitch.");
+		msg.author.sendMessage(msg.author.toString() + " https://cdn.discordapp.com/attachments/422076494664302607/431501422387920936/But-Thats-None-Of-My-Business.png");
+		msg.author.sendMessage(msg.author.toString() + " Yo mom a bitch.");
+		msg.author.sendMessage(msg.author.toString() + " https://cdn.discordapp.com/attachments/422076494664302607/431501422387920936/But-Thats-None-Of-My-Business.png");
+		msg.author.sendMessage(msg.author.toString() + " Yo mom a bitch.");
+		msg.author.sendMessage(msg.author.toString() + " https://cdn.discordapp.com/attachments/422076494664302607/431501422387920936/But-Thats-None-Of-My-Business.png");
 	}
 
 	const args = msg.content.split(' ');
