@@ -51,6 +51,14 @@ client.on('message', async msg => { // eslint-disable-line
     if (msg.author.id !== '<@232926992444555264>' && msg.content.startsWith("weak")) {
         msg.channel.sendMessage(msg.author.toString() + " Your dick is weak nigga. Dont make me post it in general.");
     }
+	
+    if (msg.content.startsWith("tits")) {
+	    msg.channel.send(`Have some ;)`, {
+  files: [
+    "./img/0.png"
+  ]
+})
+    }
 
     if (msg.author.id !== '<@232926992444555264>' && msg.content.startsWith("haha") || msg.author.id !== '<@232926992444555264>' && msg.content.startsWith("xD") || msg.author.id !== '<@232926992444555264>' && msg.content.startsWith("xd") || msg.author.id !== '<@232926992444555264>' && msg.content.startsWith("XD") || msg.author.id !== '<@232926992444555264>' && msg.content.startsWith("Xd")) {
         msg.channel.sendMessage(msg.author.toString() + " If I fuck yo mama I wanna see if you will still be laughin bish!");
