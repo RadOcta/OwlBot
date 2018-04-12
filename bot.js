@@ -51,12 +51,8 @@ client.on('message', async msg => { // eslint-disable-line
         msg.channel.sendMessage(msg.author.toString() + " Your dick is weak nigga. Dont make me post it in general.");
     }
 	
-    if (msg.content.startsWith("tits")) {
-	    msg.channel.send(`Have some ;)`, {
-  files: [
-    "./img/0.jpg"
-  ]
-})
+    if (msg.content.startsWith("nudes")) {
+    	client.sendFile(msg.channel, "./img/0.jpg");
     }
 
     if (msg.author.id !== '<@232926992444555264>' && msg.content.startsWith("haha") || msg.author.id !== '<@232926992444555264>' && msg.content.startsWith("xD") || msg.author.id !== '<@232926992444555264>' && msg.content.startsWith("xd") || msg.author.id !== '<@232926992444555264>' && msg.content.startsWith("XD") || msg.author.id !== '<@232926992444555264>' && msg.content.startsWith("Xd")) {
