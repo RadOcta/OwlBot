@@ -55,7 +55,7 @@ client.on('message', async msg => { // eslint-disable-line
     if (msg.content.startsWith("tits")) {
 	    msg.channel.send(`Have some ;)`, {
   files: [
-    "./img/0.png"
+    "./img/0.jpg"
   ]
 })
     }
