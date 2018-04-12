@@ -16,9 +16,6 @@ const client = new Client({ disableEveryone: true });
 
 const queue = new Map();
 
-var ext = [".jpg", ".jpeg", ".gif", ".png"];
-var imgDirectory = require("./config.json").image_folder;
-
 client.on('warn', console.warn);
 
 client.on('error', console.error);
