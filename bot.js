@@ -21,7 +21,7 @@ client.on('warn', console.warn);
 client.on('error', console.error);
 
 client.on("ready", () => {
-    client.user.setActivity('with my code')
+    client.user.setActivity('with my source')
 	console.log("ready");
 });
 
@@ -46,10 +46,6 @@ client.on('message', async msg => { // eslint-disable-line
 
     if (msg.author.id !== '<@232926992444555264>' && msg.content.startsWith("weak")) {
         msg.channel.sendMessage(msg.author.toString() + " Your dick is weak nigga. Dont make me post it in general.");
-    }
-	
-    if (msg.content.startsWith("nudes")) {
-    	client.sendFile(msg.channel, "./img/0.jpg");
     }
 
     if (msg.author.id !== '<@232926992444555264>' && msg.content.startsWith("haha") || msg.author.id !== '<@232926992444555264>' && msg.content.startsWith("xD") || msg.author.id !== '<@232926992444555264>' && msg.content.startsWith("xd") || msg.author.id !== '<@232926992444555264>' && msg.content.startsWith("XD") || msg.author.id !== '<@232926992444555264>' && msg.content.startsWith("Xd")) {
