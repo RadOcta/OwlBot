@@ -5,12 +5,9 @@ const { Client, Util } = require('discord.js');
 const PREFIX = "y!";
 const YouTube = require('simple-youtube-api');
 const GOOGLE_API_KEY = "AIzaSyBeacgPpA6JTR3OBpiD_IIDWC-184xFz04";
-//const music = require('discord.js-music');
-//const YoutubeDL = require('youtube-dl');
 const ytdl = require('ytdl-core');
-//const TOKEN = "NDMwNjc5NzM1MTg2NzUxNDg4.DaTtUw.cQWijiFZtemSPqWWjfv-7VjE60Q";
 const youtube = new YouTube(GOOGLE_API_KEY);
-//const music = require('discord.js-music-v11');
+const server_cmd = require("./Commands/Server.js")
 
 const client = new Client({ disableEveryone: true });
 
@@ -34,44 +31,6 @@ client.on('reconnecting', () => console.log('I am reconnecting now!'));
 
 client.on('message', async msg => { // eslint-disable-line
 	
-	if (msg.author.id !== '<@232926992444555264>' && msg.content.startsWith("heyo")) {
-			//msg.channel.sendMessage(msg.author.toString() + " Heyo my ass. Suck a penus!");
-			msg.channel.sendMessage(msg.author.toString() + " Shut the fuck up Steve I fucked your mom");
-			//msg.channel.sendMessage(msg.author.toString() + " We all know you need money Karen but those lips aren't good enough");
-    	}
-	
-	//if (msg.author.id === '<@425333761660682241>') {
-	//	msg.reply(msg.author.toString() + "https://cdn.discordapp.com/attachments/422076494664302607/431501422387920936/But-Thats-None-Of-My-Business.png")
-	//}
-
-    if (msg.author.id !== '<@232926992444555264>' && msg.content.startsWith("weak")) {
-        msg.channel.sendMessage(msg.author.toString() + " Your dick is weak nigga. Dont make me post it in general.");
-    }
-
-    if (msg.author.id !== '<@232926992444555264>' && msg.content.startsWith("haha") || msg.author.id !== '<@232926992444555264>' && msg.content.startsWith("xD") || msg.author.id !== '<@232926992444555264>' && msg.content.startsWith("xd") || msg.author.id !== '<@232926992444555264>' && msg.content.startsWith("XD") || msg.author.id !== '<@232926992444555264>' && msg.content.startsWith("Xd")) {
-        msg.channel.sendMessage(msg.author.toString() + " If I fuck yo mama I wanna see if you will still be laughin bish!");
-    }
-	
-	//if (msg.author.bot) return undefined;
-	//if (!msg.content.startsWith(PREFIX)) return undefined;
-	
-	if(msg.author.bot) return;
-	
-	if (msg.content.startsWith("<@232926992444555264>") || msg.content.startsWith("<@430679735186751488>")) {
-		msg.author.sendMessage(msg.author.toString() + " Yo mom a bitch.");
-		msg.author.sendMessage(msg.author.toString() + " https://cdn.discordapp.com/attachments/422076494664302607/431501422387920936/But-Thats-None-Of-My-Business.png");
-		msg.author.sendMessage(msg.author.toString() + " Yo mom a bitch.");
-		msg.author.sendMessage(msg.author.toString() + " https://cdn.discordapp.com/attachments/422076494664302607/431501422387920936/But-Thats-None-Of-My-Business.png");
-		msg.author.sendMessage(msg.author.toString() + " Yo mom a bitch.");
-		msg.author.sendMessage(msg.author.toString() + " https://cdn.discordapp.com/attachments/422076494664302607/431501422387920936/But-Thats-None-Of-My-Business.png");
-		msg.author.sendMessage(msg.author.toString() + " Yo mom a bitch.");
-		msg.author.sendMessage(msg.author.toString() + " https://cdn.discordapp.com/attachments/422076494664302607/431501422387920936/But-Thats-None-Of-My-Business.png");
-		msg.author.sendMessage(msg.author.toString() + " Yo mom a bitch.");
-		msg.author.sendMessage(msg.author.toString() + " https://cdn.discordapp.com/attachments/422076494664302607/431501422387920936/But-Thats-None-Of-My-Business.png");
-		msg.author.sendMessage(msg.author.toString() + " Yo mom a bitch.");
-		msg.author.sendMessage(msg.author.toString() + " https://cdn.discordapp.com/attachments/422076494664302607/431501422387920936/But-Thats-None-Of-My-Business.png");
-	}
-
 	const args = msg.content.split(' ');
 	const searchString = args.slice(1).join(' ');
 	const url = args[1] ? args[1].replace(/<(.+)>/g, '$1') : '';
@@ -116,8 +75,7 @@ client.on('message', async msg => { // eslint-disable-line
 	if(command === "ping") {
     		// Calculates ping between sending a message and editing it, giving a nice round-trip latency.
    		// The second ping is an average latency between the bot and the websocket server (one-way, not round-trip)
-    		const m = await msg.channel.send("Ping?");
-    		m.edit(`Pong! Latency is ${m.createdTimestamp - msg.createdTimestamp}ms. API Latency is ${Math.round(client.ping)}ms`);
+    		server_cmd.ping(client);
   	}
 	if(command === "purge") {
     		// This command removes all messages from all users in the channel, up to 100.
