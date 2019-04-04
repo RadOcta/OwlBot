@@ -7,7 +7,6 @@ const YouTube = require('simple-youtube-api');
 const GOOGLE_API_KEY = "AIzaSyBeacgPpA6JTR3OBpiD_IIDWC-184xFz04";
 const ytdl = require('ytdl-core');
 const youtube = new YouTube(GOOGLE_API_KEY);
-const server_cmd = require("./Commands/Server.js")
 
 const client = new Client({ disableEveryone: true });
 
@@ -35,6 +34,7 @@ client.on('message', async msg => { // eslint-disable-line
 	const searchString = args.slice(1).join(' ');
 	const url = args[1] ? args[1].replace(/<(.+)>/g, '$1') : '';
 	const serverQueue = queue.get(msg.guild.id);
+	var server_cmd = require("./Commands/Server.js");
 
 	let command = msg.content.toLowerCase().split(' ')[0];
 	command = command.slice(PREFIX.length)
@@ -75,7 +75,7 @@ client.on('message', async msg => { // eslint-disable-line
 	if(command === "ping") {
     		// Calculates ping between sending a message and editing it, giving a nice round-trip latency.
    		// The second ping is an average latency between the bot and the websocket server (one-way, not round-trip)
-    		server_cmd.ping(client);
+			 server_cmd.ping(client);
   	}
 	if(command === "purge") {
     		// This command removes all messages from all users in the channel, up to 100.
