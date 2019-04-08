@@ -24,7 +24,7 @@ client.once('ready', () => {
     })
 
     console.log("\n")
-    client.user.setActivity("my existencial crisis..", {type:"STREAMING"})
+    client.user.setActivity("my existencial crisis..", {type:"WATCHING"})
 });
 
 client.on('disconnect', function(erMsg, code) {
@@ -58,8 +58,8 @@ client.on("message", msg => {
 
     // Some Commands to be used on Channels
 
-    if (msg.content === '!report') {
-        const reports = new Report(msg.content);
+    if (msg.content === '!help') {
+        msg.channel.send("You need help? Sounds like a personal problem")
     }
 });
 
