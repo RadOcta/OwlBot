@@ -58,7 +58,7 @@ client.on("message", msg => {
 
     // Some Commands to be used on Channels
 
-    if (msg.content === '!help') {
+    if (msg.content === prefix + "help") {
         msg.channel.send("You need help? Sounds like a personal problem")
     }
 });
