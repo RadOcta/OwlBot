@@ -4,7 +4,7 @@ const client = new Discord.Client();
 const Report = new require('./Client/Commands.js');
 
 client.on('ready', () => {
-    console.log('\nClient is ready!\n----------------');
+    console.log('\nClient is ready!\n----------------\n');
     // List servers the bot is connected to
     client.guilds.forEach((guild) => {
 
@@ -20,10 +20,9 @@ client.on('ready', () => {
         + "\nOwner: " + client.users.get(owner).username 
         + "\nRegion: " + guild.region
         + "\nMembers: " + guild.memberCount
-        + "\n------------------------------------------------------------------------")
+        + "\n------------------------------------")
     })
-
-    console.log("\n")
+    
     client.user.setActivity("my existencial crisis..", {type:"WATCHING"})
 });
 
