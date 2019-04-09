@@ -3,7 +3,7 @@ const { prefix, token } = require('./Client/Config.json');
 const client = new Discord.Client();
 const Report = new require('./Client/Commands.js');
 
-client.once('ready', () => {
+client.on('ready', () => {
     console.log('\nClient is ready!\n----------------');
     // List servers the bot is connected to
     client.guilds.forEach((guild) => {
