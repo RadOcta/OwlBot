@@ -4,7 +4,7 @@ const Discord = require("discord.js");
 const { Client, Util } = require('discord.js');
 const PREFIX = "y!";
 const YouTube = require('simple-youtube-api');
-const GOOGLE_API_KEY = "AIzaSyBeacgPpA6JTR3OBpiD_IIDWC-184xFz04";
+const GOOGLE_API_KEY = "GOOGLE API KEY";
 const ytdl = require('ytdl-core');
 const youtube = new YouTube(GOOGLE_API_KEY);
 
